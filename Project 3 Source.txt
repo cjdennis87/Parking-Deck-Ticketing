@@ -1,0 +1,93 @@
+//Program:				Parking Deck Ticketing System.cpp
+//Course:				CSE1311/001
+// Name:				Christopher Dennis
+// Assignment #:			Project 3
+// Due Date:				11/02/2017
+
+#include<iostream>
+#include<cmath>
+
+using namespace::std;
+
+void printRecipt(int inHr, int inMin, int outHr, int outMin, int time, int fare) {
+   if (inHr == 99)
+       cout<<"You're using a special pass. Your fare is $"<<fare<<endl;
+   else if (outHr == 55)
+       cout<<"Entrance Time: "<<inHr<<":"<<inMin<<endl<<"You have lost your card\nFare is: $"<<fare<<endl;
+   else
+       cout<<"Entrance Time: "<<inHr<<":"<<inMin<<endl<<"Exit Time: " <<outHr<<":"<<outMin<<endl<<"Total time: "<<time<<" minutes"<<endl<<"Fare is $"<<fare<<endl;
+}
+
+void acceptTime(int* hr, int* min, string str) {
+   cout<<"Enter "<<str<< " Time in Hours: ";
+   cin>>*hr;
+   while ((*hr < 0 || *hr > 23 )&& *hr != 55 && *hr != 99) {
+       cout<<"Invalid input. Hour must be between 0-23: ";
+       cin>>*hr;
+   }
+   if (*hr == 55 || *hr == 99) {
+       *min = *hr;
+       return;
+   }
+   cout<<"Enter Time in Minutes: ";
+   cin>>*min;
+   while (*min < 0 || *min > 59) {
+       cout<<"Invalid input. Minutes must be between 0-59: ";
+       cin>>*min;
+   }
+}
+
+int main() {
+	
+   int inHr, inMin, outHr, outMin, time, price;
+   void acceptTime(int*, int*,string);
+   int calcTime(int, int, int, int);
+   int calcFare(int);
+   void printRecipt(int, int, int, int, int, int);
+   acceptTime(&inHr, &inMin, "Entrance");
+   acceptTime(&outHr, &outMin, "Exit");
+   time = calcTime(inHr, inMin, outHr, outMin);
+   price = calcFare(time);
+   printRecipt(inHr, inMin, outHr, outMin, time, price);
+
+}
+
+int calcTime(int inHr, int inMin, int outHr, int outMin) {
+   if (outHr == 55 && outMin == 55)
+       return -2;
+   if (inHr == 99)
+       return -1;
+   if (inHr <= outHr)
+       return (outHr - inHr)*60 + outMin - inMin;
+  
+   return (outHr + 24 - inHr)*60 + outMin - inMin;
+}
+
+int calcFare (int time) {
+   if (time == -1) //special pass
+       return 5;
+   if (time == -2) // lost token
+       return 110;
+   if (time <= 30)
+       return 3;
+   if (time <= 60)
+       return 5;
+   if (time <= 120)
+       return 10;
+   if (time <= 180)
+       return 15;
+   if (time <= 240)
+       return 30;
+   if (time <= 720)
+       return 30 + ceil((time - 240)/30)*5;
+    if (time > 720 && time <= 1440){
+    cout << "**Error***\n";
+	}
+   return -1; //error
+   
+//Closing Statement
+	cout << "This program coded by Christopher Dennis" << endl;	// Christopher Dennis
+
+	cin.get(); 
+	return 0;
+}

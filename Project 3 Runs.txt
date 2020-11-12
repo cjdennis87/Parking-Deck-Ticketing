@@ -1,0 +1,98 @@
+Run 1
+Enter Entrance Time in Hours: 00
+Enter Time in Minutes: 00
+Enter Exit Time in Hours: 00
+Enter Time in Minutes: 30
+Entrance Time: 0:0
+Exit Time: 0:30
+Total time: 30 minutes
+Fare is $3
+
+Run2
+Enter Entrance Time in Hours: 05
+Enter Time in Minutes: 45
+Enter Exit Time in Hours: 07
+Enter Time in Minutes: 00
+Entrance Time: 5:45
+Exit Time: 7:0
+Total time: 75 minutes
+Fare is $10
+
+Run3
+Enter Entrance Time in Hours: 06
+Enter Time in Minutes: 32
+Enter Exit Time in Hours: 09
+Enter Time in Minutes: 54
+Entrance Time: 6:32
+Exit Time: 9:54
+Total time: 202 minutes
+Fare is $30
+
+Run 4
+Enter Entrance Time in Hours: 09
+Enter Time in Minutes: 15
+Enter Exit Time in Hours: 12
+Enter Time in Minutes: 15
+Entrance Time: 9:15
+Exit Time: 12:15
+Total time: 180 minutes
+Fare is $15
+
+Run 5
+Enter Entrance Time in Hours: 09
+Enter Time in Minutes: 32
+Enter Exit Time in Hours: 14
+Enter Time in Minutes: 35
+Entrance Time: 9:32
+Exit Time: 14:35
+Total time: 303 minutes
+Fare is $40
+
+Run 6
+Enter Entrance Time in Hours: 08
+Enter Time in Minutes: 00
+Enter Exit Time in Hours: 10
+Enter Time in Minutes: 30
+Entrance Time: 8:0
+Exit Time: 10:30
+Total time: 150 minutes
+Fare is $15
+
+Run 7
+Enter Entrance Time in Hours: 08
+Enter Time in Minutes: 45
+Enter Exit Time in Hours: 55
+Entrance Time: 8:45
+You have lost your card
+Fare is: $110
+
+Run 8
+Enter Entrance Time in Hours: 99
+Enter Exit Time in Hours: 99
+You're using a special pass. Your fare is $5
+
+Run 9
+Enter Entrance Time in Hours: 9
+Enter Time in Minutes: 10
+Enter Exit Time in Hours: 23
+Enter Time in Minutes: 30
+**Error***
+Entrance Time: 9:10
+Exit Time: 23:30
+Total time: 860 minutes
+Fare is $-1
+
+Run 10
+Extra Credit
+Enter Entrance Time in Hours: 17
+Enter Time in Minutes: 0
+Enter Exit Time in Hours: 4
+Enter Time in Minutes: 0
+Entrance Time: 17:0
+Exit Time: 4:0
+Total time: 660 minutes
+Fare is $100
+
+--------------------------------
+Process exited after 8.126 seconds with return value 0
+Press any key to continue . . .
